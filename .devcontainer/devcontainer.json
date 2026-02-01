@@ -1,0 +1,24 @@
+  {
+	"name": "MotoTRBO TTS Dev Container",
+	"build": {
+	  "dockerfile": "Dockerfile",
+	  "context": ".."
+	},
+	"customizations": {
+	  "vscode": {
+		"extensions": [
+		  "esbenp.prettier-vscode",
+		  "lfs.vscode-emacs-friendly",
+		  "ms-azuretools.vscode-docker"
+		]
+	  }
+	},
+	"containerEnv": {
+		"DATA_DIR": "./data",
+		"OUTPUT_DIR": "./output",
+		"INPUT_FILE": "./phrases.lst",
+		"CONFIG_FILE": "./config.conf",
+		"TMP_DIR": "./tmp"
+	},
+	"postCreateCommand": "bash ./.devcontainer/setup.sh"
+  }

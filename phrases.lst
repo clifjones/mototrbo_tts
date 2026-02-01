@@ -1,0 +1,7 @@
+# Bash-style: filename=phrase (one per line)
+z1=Zone 1
+z1-loc=Local
+z1-echo=Echo test
+z1-mon-t1=Monitor timeslot 1
+z1-mon-t2=Monitor timeslot 2
+

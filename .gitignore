@@ -1,0 +1,39 @@
+# Python virtual environment
+.venv/
+venv/
+env/
+
+# Python compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Temporary directories
+tmp/
+temp/
+
+# Generated audio files
+*.wav
+
+# Data directory (voice models)
+data/
+
+# Output directory (generated voice announcements)
+output/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
