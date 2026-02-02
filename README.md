@@ -1,7 +1,7 @@
 # mototrbo_tts
-Generate voice announcement files from a config file of needed phrases for your MotoTRBO radio.
+Generate voice announcement files from a config file of required phrases for your MotoTRBO radio.
 
-This project will use VS Code Dev Containers and [Piper TTS](https://github.com/OHF-Voice/piper1-gpl) to generate your voice announcement files for CPS in bulk.
+This project will use VS Code Dev Containers and [Piper TTS](https://github.com/OHF-Voice/piper1-gpl) to generate voice announcement files in bulk for CPS.
 
 ## Prerequisites
 
@@ -12,14 +12,14 @@ All tooling needed to build your voice files will be contained in the Dev Contai
 
 1. Download or clone [this repo](https://github.com/clifjones/mototrbo_tts.git) and open the folder with VS Code.
     * VS Code should prompt you to open the project in a Dev Container.
-    * Answer YES and allow the container to build successfully
+    * Click YES and wait for the container to build successfully
     ![Dev Container build](/images/dev_container_build.png)
 2. Edit the [config.env](/config.env) to select your voice model.
     * You can find a complete list at [Hugging Face](https://huggingface.co/rhasspy/piper-voices)
     * You can listen to samples at [TTS Tool](https://piper.ttstool.com/)
     ![Voice model selection](/images/voice-config.png)
-3. Edit the [phrases.lst](/phrases.lst) file build your filename and phrase pairs. 
-    * Each line sould have a filename with no extension followed by '=' then your desired phrase.
+3. Edit the [phrases.lst](/phrases.lst) file to create your filename and phrase pairs. 
+    * Each line should have a filename with no extension followed by '=' then your desired phrase.
     ![Phrase configuration](/images/announcement-file-config.png)
 4. Open a new terminal from the VS Code menu and run the `./gen-files.sh` command.
     * This will download the necessary voice model files and generate the WAV files suitable to be used in CPS.
@@ -36,7 +36,7 @@ All tooling needed to build your voice files will be contained in the Dev Contai
     * Select the desired announcement files to use and send them to the radio.
     ![Manage announcement files](/images/manage_voice_announcement.png)
 7. Use the voice announcement files
-    * Read the codeplug from the radio into CPS after the announcement files transfer so CPS will know that they can be selected.
+    * Read the codeplug from the radio into CPS after the announcement files are transferred so CPS will know that they can be selected.
     * Ensure that you have the announcement type set to `Voice Announcement Files`.
     ![Announcement settings](/images/announcement_settings.png)
     * Select your files where you would like them announced.
