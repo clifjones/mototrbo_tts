@@ -5,7 +5,7 @@ This project will use VS Code Dev Containers and [Piper TTS](https://github.com/
 
 ## Prerequisites
 
-This project requires VS Code with the Dev Containers plugin and internet access.
+This project requires [Docker](https://docs.docker.com/desktop/), [VS Code](https://code.visualstudio.com/) with the `Dev Container` plugin and internet access.
 All tooling needed to build your voice files will be contained in the Dev Container Docker image.
 
 ## Usage
@@ -13,7 +13,10 @@ All tooling needed to build your voice files will be contained in the Dev Contai
 1. Download or clone [this repo](https://github.com/clifjones/mototrbo_tts.git) and open the folder with VS Code.
     * VS Code should prompt you to open the project in a Dev Container.
     * Click YES and wait for the container to build successfully
+    ![Dev Container prompt](/images/dev_container_prompt.png)
+    * You should see the Dev Container initialization, download, and setup in the terminal or log file that you offered to open. This will take several minutes the first time you do it, but the files are cached locally on your computer to make opening the Dev Container environment much faster in the future.
     ![Dev Container build](/images/dev_container_build.png)
+    * If you did not see the Dev Container prompt, open it, and see the Dev Container build and setup run to completion successfully, **STOP HERE** and troubleshoot, as the tool will not work.
 2. Edit the [config.env](/config.env) to select your voice model.
     * You can find a complete list at [Hugging Face](https://huggingface.co/rhasspy/piper-voices)
     * You can listen to samples at [TTS Tool](https://piper.ttstool.com/)
